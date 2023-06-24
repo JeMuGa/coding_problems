@@ -1,0 +1,15 @@
+{
+  "extends": ["airbnb-base", "prettier"],
+  "env": {
+    "jest": true,
+    "es6": true
+  },
+  "plugins": ["import", "prettier"],
+  "rules": {
+    "no-plusplus": "off",
+    "no-param-reassign": "off",
+    "no-use-before-define": ["error", { "functions": false }],
+    "no-continue": "off",
+    "no-bitwise": "off"
+  }
+}
