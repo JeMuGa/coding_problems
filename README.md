@@ -2,7 +2,7 @@
 
 This is a list of generic coding problems I find usefull to practice with.
 
-Its just a compilation of problems I find on internet. If you know a better answer or an answer in another language other than JS, feel free to add it on the file with a comment and dont forget to add the test to it plz.
+Its just a compilation of problems I find on internet. If you know a better answer or an answer in another language other than JS, feel free to do a Pull-Request to add it on the file with a comment and dont forget to add the test to it plz.
 
 Expect more to come with time.
 
