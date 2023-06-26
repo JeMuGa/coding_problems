@@ -4,6 +4,7 @@ import twoSum from '../solutions/problem_1';
 import { serialize, deserialize } from '../solutions/problem_2';
 import firstMissingPositiveInteger from '../solutions/problem_3';
 import productExceptSelf from '../solutions/problem_4';
+import firstRecurringCharacter from '../solutions/problem_5';
 
 describe('Solutions', () => {
   test('1: Two Sum', () => {
@@ -40,5 +41,12 @@ describe('Solutions', () => {
     expect(productExceptSelf([3, 2, 1])).toEqual([2, 3, 6]);
     expect(productExceptSelf([1])).toEqual([1]);
     expect(productExceptSelf([])).toEqual([]);
+  });
+
+  test('5: First recurring character', () => {
+    expect(firstRecurringCharacter([2, 4, 5, 1, 2, 5, 3, 7])).toEqual(2);
+    expect(firstRecurringCharacter([2, 1, 1, 3, 2, 5, 3, 7])).toEqual(1);
+    expect(firstRecurringCharacter([2, 4, 1, 7])).toEqual(undefined);
+    expect(firstRecurringCharacter([])).toEqual(undefined);
   });
 });
