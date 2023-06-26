@@ -82,3 +82,26 @@ If the input has no recurring characters then it should return undefined.
 [Solution](https://github.com/JeMuGa/coding_problems/blob/main/solutions/problem_5.js)
 
 ---
+
+## Problem 6
+
+cons(a, b) constructs a pair, and car(pair) and cdr(pair) returns the first and last element of that pair.
+
+For example, car(cons(3, 4)) returns 3, and cdr(cons(3, 4)) returns 4.
+
+Given this implementation of cons:
+
+```javascript
+function cons(a, b) {
+  function pair(cb) {
+    return cb(a, b);
+  }
+  return pair;
+}
+```
+
+Implement car and cdr.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/solutions/problem_6.js)
+
+---

@@ -8,12 +8,11 @@
   "keywords": [
     "algorithms",
     "data structures",
-    "coding problems",
-    "arrays"
+    "coding problems"
   ],
   "scripts": {
     "check-all": "yarn prettier && yarn lint && yarn test",
-    "prettier": "prettier --write 'problems/**/*.js'",
+    "prettier": "prettier --write solutions/**/*.js",
     "lint": "eslint .",
     "test": "jest",
     "start": "jest --watch"
