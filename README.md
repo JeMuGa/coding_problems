@@ -2,9 +2,9 @@
 
 This is a list of generic coding problems I find usefull to practice with.
 
-Its just a compilation of problems I find on internet. If you know a better answer or an answer in another language other than JS, feel free to do a Pull-Request to add it on the file with a comment and dont forget to add the test to it plz.
+Its just a compilation of problems I find on internet. If you know a better answer or an answer in another language other than JS, feel free to do a Pull-Request to add it with a comment and dont forget to add the test to it.
 
-Expect more to come with time.
+---
 
 ## Problem 1
 
@@ -69,5 +69,16 @@ For example, if our input was [1, 2, 3, 4, 5], the expected output would be [120
 Follow-up: what if you can't use division?
 
 [Solution](https://github.com/JeMuGa/coding_problems/blob/main/solutions/problem_4.js)
+
+---
+
+## Problem 5
+
+Given an array, return the first recurring character.
+
+For example, if our input was [2, 4, 5, 1, 2, 5, 3, 7], the expected return should be 2. If our input was [2, 1, 1, 3, 2, 5, 3, 7] the expected return should be 1.
+If the input has no recurring characters then it should return undefined.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/solutions/problem_5.js)
 
 ---
