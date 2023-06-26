@@ -5,6 +5,7 @@ import { serialize, deserialize } from '../solutions/problem_2';
 import firstMissingPositiveInteger from '../solutions/problem_3';
 import productExceptSelf from '../solutions/problem_4';
 import firstRecurringCharacter from '../solutions/problem_5';
+import { cons, car, cdr } from '../solutions/problem_6';
 
 describe('Solutions', () => {
   test('1: Two Sum', () => {
@@ -48,5 +49,10 @@ describe('Solutions', () => {
     expect(firstRecurringCharacter([2, 1, 1, 3, 2, 5, 3, 7])).toEqual(1);
     expect(firstRecurringCharacter([2, 4, 1, 7])).toEqual(undefined);
     expect(firstRecurringCharacter([])).toEqual(undefined);
+  });
+
+  test('6: Pairs', () => {
+    expect(car(cons(3, 4))).toBe(3);
+    expect(cdr(cons(3, 4))).toBe(4);
   });
 });
