@@ -1,4 +1,3 @@
-
 /* eslint-disable */
 
 // Problem 7
@@ -14,7 +13,7 @@
 // you can assume you have access to getPointer and dereferencePointer functions
 // that converts between nodes and memory addresses.
 //
-// WARNING: THIS CODE DOES NOT HAVE A TEST 
+// WARNING: THIS CODE DOES NOT HAVE A TEST
 //
 // add(element): O(1) Time complexity and Space complexity
 // get(index): O(N) Time complexity and O(1) Space complexity
@@ -25,7 +24,7 @@
  * @param {*} val
  */
 class ListNode {
-    constructor(val) {
+  constructor(val) {
     this.val = val;
     this.both = null;
   }

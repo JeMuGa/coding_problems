@@ -6,6 +6,7 @@ import firstMissingPositiveInteger from '../solutions/problem_3';
 import productExceptSelf from '../solutions/problem_4';
 import firstRecurringCharacter from '../solutions/problem_5';
 import { cons, car, cdr } from '../solutions/problem_6';
+import numDecodings from '../solutions/problem_8';
 
 describe('Solutions', () => {
   test('1: Two Sum', () => {
@@ -54,5 +55,19 @@ describe('Solutions', () => {
   test('6: Pairs', () => {
     expect(car(cons(3, 4))).toBe(3);
     expect(cdr(cons(3, 4))).toBe(4);
+  });
+
+  test('8: Decode Message', () => {
+    expect(numDecodings('111')).toBe(3);
+    expect(numDecodings('12')).toBe(2);
+    expect(numDecodings('8')).toBe(1);
+    expect(numDecodings('26')).toBe(2);
+    expect(numDecodings('27')).toBe(1);
+    expect(numDecodings('226')).toBe(3);
+    expect(numDecodings('10')).toBe(1);
+    expect(numDecodings('11')).toBe(2);
+    expect(numDecodings('34')).toBe(1);
+    expect(numDecodings('0')).toBe(0);
+    expect(numDecodings('1')).toBe(1);
   });
 });
