@@ -7,6 +7,7 @@ import productExceptSelf from '../solutions/problem_4';
 import firstRecurringCharacter from '../solutions/problem_5';
 import { cons, car, cdr } from '../solutions/problem_6';
 import numDecodings from '../solutions/problem_8';
+import countUnivalSubtrees from '../solutions/problem_9';
 
 describe('Solutions', () => {
   test('1: Two Sum', () => {
@@ -70,4 +71,56 @@ describe('Solutions', () => {
     expect(numDecodings('0')).toBe(0);
     expect(numDecodings('1')).toBe(1);
   });
+
+  test('9: Count Unival Subtrees', () => {
+    const node = new TreeNode(0);
+    node.left = new TreeNode(1);
+    node.right = new TreeNode(0);
+    node.right.left = new TreeNode(1);
+    node.right.right = new TreeNode(0);
+    node.right.left.left = new TreeNode(1);
+    node.right.left.right = new TreeNode(1);
+
+    expect(countUnivalSubtrees(node)).toBe(5);
+
+    const node1 = new TreeNode(0);
+    node1.left = new TreeNode(0);
+    node1.right = new TreeNode(0);
+    node1.right.left = new TreeNode(0);
+    node1.right.right = new TreeNode(0);
+    node1.right.right.right = new TreeNode(1);
+
+    expect(countUnivalSubtrees(node1)).toBe(3);
+
+    const node2 = new TreeNode(0);
+    node2.left = new TreeNode(2);
+    node2.right = new TreeNode(1);
+    node2.right.left = new TreeNode(1);
+    node2.right.right = new TreeNode(1);
+    node2.right.right.right = new TreeNode(1);
+
+    expect(countUnivalSubtrees(node2)).toBe(5);
+
+    const node3 = new TreeNode(0);
+    expect(countUnivalSubtrees(node3)).toBe(1);
+
+    const node4 = new TreeNode(0);
+    node4.left = new TreeNode(0);
+    expect(countUnivalSubtrees(node4)).toBe(2);
+
+    const node5 = new TreeNode(0);
+    node5.left = new TreeNode(1);
+    expect(countUnivalSubtrees(node5)).toBe(1);
+
+    const node6 = new TreeNode(0);
+    node6.left = new TreeNode(0);
+    node6.right = new TreeNode(0);
+    expect(countUnivalSubtrees(node6)).toBe(3);
+
+    const node7 = new TreeNode(0);
+    node7.left = new TreeNode(1);
+    node7.right = new TreeNode(2);
+    expect(countUnivalSubtrees(node7)).toBe(2);
+  });
 });
+
