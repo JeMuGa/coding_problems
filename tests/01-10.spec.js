@@ -1,15 +1,16 @@
-import TreeNode from '../solutions/data-structures/TreeNode';
+import TreeNode from '../problems/data-structures/TreeNode';
 
-import twoSum from '../solutions/problem_1';
-import { serialize, deserialize } from '../solutions/problem_2';
-import firstMissingPositiveInteger from '../solutions/problem_3';
-import productExceptSelf from '../solutions/problem_4';
-import firstRecurringCharacter from '../solutions/problem_5';
-import { cons, car, cdr } from '../solutions/problem_6';
-import numDecodings from '../solutions/problem_8';
-import countUnivalSubtrees from '../solutions/problem_9';
+import twoSum from '../problems/01-10/problem_1';
+import { serialize, deserialize } from '../problems/01-10/problem_2';
+import firstMissingPositiveInteger from '../problems/01-10/problem_3';
+import productExceptSelf from '../problems/01-10/problem_4';
+import firstRecurringCharacter from '../problems/01-10/problem_5';
+import { cons, car, cdr } from '../problems/01-10/problem_6';
+import numDecodings from '../problems/01-10/problem_8';
+import countUnivalSubtrees from '../problems/01-10/problem_9';
+import sumNonAdjacent from '../problems/01-10/problem_10';
 
-describe('Solutions', () => {
+describe('Problems 1 to 10', () => {
   test('1: Two Sum', () => {
     expect(twoSum([2, 7, 11, 15], 9)).toBe(true);
     expect(twoSum([], 19)).toBe(false);
@@ -121,6 +122,26 @@ describe('Solutions', () => {
     node7.left = new TreeNode(1);
     node7.right = new TreeNode(2);
     expect(countUnivalSubtrees(node7)).toBe(2);
+  });
+
+  test('10: Non Adjacent Sums', () => {
+    expect(sumNonAdjacent([2, 4, 6, 2, 5])).toBe(13);
+    expect(sumNonAdjacent([5, 1, 1, 5])).toBe(10);
+    expect(sumNonAdjacent([5])).toBe(5);
+    expect(sumNonAdjacent([5, 6])).toBe(6);
+    expect(sumNonAdjacent([6, 5])).toBe(6);
+
+    expect(sumNonAdjacent([0, -4, -2])).toBe(0);
+    expect(sumNonAdjacent([0, -2, -4])).toBe(0);
+    expect(sumNonAdjacent([0, 0, -4])).toBe(0);
+    expect(sumNonAdjacent([-5, -1, -1, -5])).toBe(0);
+    expect(sumNonAdjacent([-5, -1, 1, -5])).toBe(1);
+
+    expect(sumNonAdjacent([2, 4, -6, 2, 5])).toBe(9);
+    expect(sumNonAdjacent([2, 4, -6, 5, 2])).toBe(9);
+    expect(sumNonAdjacent([2, 4, -6, -5, 4])).toBe(8);
+    expect(sumNonAdjacent([3, 5, -7, 8, 10])).toBe(15);
+    expect(sumNonAdjacent([-3])).toBe(0);
   });
 });
 

@@ -14,7 +14,7 @@ For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
 
 Bonus: Can you do this in one pass?
 
-[Solution](https://github.com/JeMuGa/coding_problems/blob/main/solutions/problem_1.js)
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/01-10/problem_1.js)
 
 ---
 
@@ -44,7 +44,7 @@ const node = new TreeNode(
 expect(deserialize(serialize(node)).left.left.val).toEqual('left.left'); // Jest Testing
 ```
 
-[Solution](https://github.com/JeMuGa/coding_problems/blob/main/solutions/problem_2.js)
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/01-10/problem_2.js)
 
 ---
 
@@ -56,7 +56,7 @@ For example, the input [3, 4, -1, 1] should give 2. The input [1, 2, 0] should g
 
 You can modify the input array in-place.
 
-[Solution](https://github.com/JeMuGa/coding_problems/blob/main/solutions/problem_3.js)
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/01-10/problem_3.js)
 
 ---
 
@@ -68,7 +68,7 @@ For example, if our input was [1, 2, 3, 4, 5], the expected output would be [120
 
 Follow-up: what if you can't use division?
 
-[Solution](https://github.com/JeMuGa/coding_problems/blob/main/solutions/problem_4.js)
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/01-10/problem_4.js)
 
 ---
 
@@ -79,7 +79,7 @@ Given an array, return the first recurring character.
 For example, if our input was [2, 4, 5, 1, 2, 5, 3, 7], the expected return should be 2. If our input was [2, 1, 1, 3, 2, 5, 3, 7] the expected return should be 1.
 If the input has no recurring characters then it should return undefined.
 
-[Solution](https://github.com/JeMuGa/coding_problems/blob/main/solutions/problem_5.js)
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/01-10/problem_5.js)
 
 ---
 
@@ -102,7 +102,7 @@ function cons(a, b) {
 
 Implement car and cdr.
 
-[Solution](https://github.com/JeMuGa/coding_problems/blob/main/solutions/problem_6.js)
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/01-10/problem_6.js)
 
 ---
 
@@ -115,7 +115,7 @@ Implement an XOR linked list; it has an add(element) which adds the element to t
 
 If using a language that has no pointers (such as Javascript), you can assume you have access to getPointer and dereferencePointer functions that converts between nodes and memory addresses.
 
-[Solution](https://github.com/JeMuGa/coding_problems/blob/main/solutions/problem_7.js)
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/01-10/problem_7.js)
 
 ---
 
@@ -127,7 +127,7 @@ For example, the message '111' would give 3, since it could be decoded as 'aaa',
 
 You can assume that the messages are decodable. For example, '001' is not allowed.
 
-[Solution](https://github.com/JeMuGa/coding_problems/blob/main/solutions/problem_8.js)
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/01-10/problem_8.js)
 
 ---
 
@@ -149,6 +149,18 @@ For example, the following tree has 5 unival subtrees:
  1   1
 ```
 
-[Solution](https://github.com/JeMuGa/coding_problems/blob/main/solutions/problem_9.js)
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/01-10/problem_9.js)
+
+---
+
+## Problem 10
+
+Given a list of integers, write a function that returns the largest sum of non-adjacent numbers. Numbers can be 0 or negative.
+
+For example, [2, 4, 6, 2, 5] should return 13, since we pick 2, 6, and 5. [5, 1, 1, 5] should return 10, since we pick 5 and 5.
+
+Follow-up: Can you do this in O(N) time and constant space?
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/01-10/problem_10.js)
 
 ---
