@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "check-all": "yarn prettier && yarn lint && yarn test",
-    "prettier": "prettier --write solutions/**/*.js",
+    "prettier": "prettier --write problems/**/*.js",
     "lint": "eslint .",
     "test": "jest",
     "start": "jest --watch"

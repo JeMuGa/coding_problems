@@ -18,7 +18,7 @@
 // O(N) Space Complexity
 // N is the number of nodes in the tree
 
-import TreeNode from './data-structures/TreeNode';
+import TreeNode from '../data-structures/TreeNode';
 
 // Serialize using level order traversal
 
