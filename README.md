@@ -164,3 +164,12 @@ Follow-up: Can you do this in O(N) time and constant space?
 [Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/01-10/problem_10.js)
 
 ---
+
+## Problem 11
+
+Implement a job scheduler which takes in a function f and an integer n, and calls f after n milliseconds.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/11-20/problem_11.js)
+
+
+---
