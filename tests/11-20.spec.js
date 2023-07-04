@@ -2,6 +2,7 @@ import isPermutation from "../problems/helpers/isPermutation";
 
 import schedule from "../problems/11-20/problem_11";
 import getWordsWithPrefix from "../problems/11-20/problem_12";
+import { climbStairs1, climbStairs2 } from "../problems/11-20/problem_13";
 
 describe('Problems 1 to 10', () => {
   test('11: Job Scheduling', () => {
@@ -47,6 +48,14 @@ describe('Problems 1 to 10', () => {
     expect(getWordsWithPrefix('fr', ['dog', 'deer', 'deal', 'cat'])).toEqual(
       []
     );
+  });
+
+  test('13: Climbing Stairs', () => {
+    expect(climbStairs1(4)).toBe(5);
+    expect(climbStairs2(4, [1, 2])).toBe(5);
+
+    expect(climbStairs2(4, [1, 2, 3])).toBe(7);
+    expect(climbStairs2(7, [1, 3, 5])).toBe(12);
   });
 });
 
