@@ -208,3 +208,12 @@ For example, if X = {1, 3, 5}, you could climb 1, 3, or 5 steps at a time.
 
 ---
 
+## Problem 14
+
+Given an integer k and a string s, find the length of the longest substring that contains at most k distinct characters.
+
+For example, given s = "abcba" and k = 2, the longest substring with k distinct characters is "bcb".
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/11-20/problem_14.js)
+
+---
