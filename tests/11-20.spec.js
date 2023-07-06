@@ -4,6 +4,7 @@ import schedule from "../problems/11-20/problem_11";
 import getWordsWithPrefix from "../problems/11-20/problem_12";
 import { climbStairs1, climbStairs2 } from "../problems/11-20/problem_13";
 import kLongestSubstring from "../problems/11-20/problem_14";
+import selectRandomizer from "../problems/11-20/problem_16";
 
 describe('Problems 1 to 10', () => {
   test('11: Job Scheduling', () => {
@@ -72,6 +73,23 @@ describe('Problems 1 to 10', () => {
 
     expect(kLongestSubstring('abcbbbbcccbdddadacb', 2)).toBe('bcbbbbcccb');
     expect(kLongestSubstring('abcadcacacaca', 3)).toBe('cadcacacaca');
+  });
+
+  test('16: Select Random Element From Stream of Elements', () => {
+    const stream1 = [1, 2, 3, 4, 5];
+    const stream2 = [6, 7, 8, 9, 10];
+    const stream3 = [11, 12, 13, 14, 15];
+    const randomizer = selectRandomizer();
+
+    const rand1 = randomizer(stream1);
+    const rand2 = randomizer(stream2);
+    const rand3 = randomizer(stream3);
+
+    expect([1, 2, 3, 4, 5]).toContain(rand1);
+    expect([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]).toContain(rand2);
+    expect([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]).toContain(
+      rand3
+    );
   });
 });
 

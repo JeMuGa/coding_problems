@@ -228,3 +228,11 @@ Hint: The basic equation of a circle is x2 + y2 = r2.
 
 ---
 
+## Problem 16
+
+Given a stream of elements too large to store in memory,
+pick a random element from the stream with uniform probability.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/11-20/problem_16.js)
+
+---
