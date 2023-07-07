@@ -5,6 +5,7 @@ import getWordsWithPrefix from "../problems/11-20/problem_12";
 import { climbStairs1, climbStairs2 } from "../problems/11-20/problem_13";
 import kLongestSubstring from "../problems/11-20/problem_14";
 import selectRandomizer from "../problems/11-20/problem_16";
+import Log from "../problems/11-20/problem_17";
 
 describe('Problems 1 to 10', () => {
   test('11: Job Scheduling', () => {
@@ -90,6 +91,30 @@ describe('Problems 1 to 10', () => {
     expect([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]).toContain(
       rand3
     );
+  });
+
+  test('17: Record and Get ith last element', () => {
+    const orderLog = new Log(5);
+    orderLog.record(111);
+    orderLog.record(222);
+    orderLog.record(333);
+    orderLog.record(444);
+    orderLog.record(555);
+
+    expect(orderLog.getLast(1)).toBe(555);
+    expect(orderLog.getLast(2)).toBe(444);
+    expect(orderLog.getLast(3)).toBe(333);
+    expect(orderLog.getLast(4)).toBe(222);
+    expect(orderLog.getLast(5)).toBe(111);
+
+    orderLog.record(666);
+    orderLog.record(777);
+
+    expect(orderLog.getLast(1)).toBe(777);
+    expect(orderLog.getLast(2)).toBe(666);
+    expect(orderLog.getLast(3)).toBe(555);
+    expect(orderLog.getLast(4)).toBe(444);
+    expect(orderLog.getLast(5)).toBe(333);
   });
 });
 
