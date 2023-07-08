@@ -6,6 +6,7 @@ import { climbStairs1, climbStairs2 } from "../problems/11-20/problem_13";
 import kLongestSubstring from "../problems/11-20/problem_14";
 import selectRandomizer from "../problems/11-20/problem_16";
 import Log from "../problems/11-20/problem_17";
+import longestFilePath from "../problems/11-20/problem_18";
 
 describe('Problems 1 to 10', () => {
   test('11: Job Scheduling', () => {
@@ -115,6 +116,37 @@ describe('Problems 1 to 10', () => {
     expect(orderLog.getLast(3)).toBe(555);
     expect(orderLog.getLast(4)).toBe(444);
     expect(orderLog.getLast(5)).toBe(333);
+  });
+
+  test('18: Get the Longest Absolute Path to a File', () => {
+    expect(
+      longestFilePath(
+        'dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext'
+      )
+    ).toBe(32);
+
+    expect(
+      longestFilePath(
+        'dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext\n\t\t\tfile22.ext'
+      )
+    ).toBe(33);
+
+    expect(
+      longestFilePath(
+        'dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir11\n\t\t\tfile11.ext\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext\n\t\t\tfile22.ext'
+      )
+    ).toBe(34);
+
+    expect(longestFilePath('dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext')).toBe(20);
+
+    expect(longestFilePath('dir\n\tsubdir1\n\tsubdir2\n\tsubdir3')).toBe(0);
+
+    expect(
+      longestFilePath('dir\n\tsubdir1\n\t\tsubsubdir1\n\tsubdir2\n\tsubdir3')
+    ).toBe(0);
+
+    expect(longestFilePath('dir')).toBe(0);
+    expect(longestFilePath('dir\n\tfile1.txt')).toBe(13);
   });
 });
 
