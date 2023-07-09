@@ -7,6 +7,7 @@ import kLongestSubstring from "../problems/11-20/problem_14";
 import selectRandomizer from "../problems/11-20/problem_16";
 import Log from "../problems/11-20/problem_17";
 import longestFilePath from "../problems/11-20/problem_18";
+import maxSubArrayLengthK from "../problems/11-20/problem_19";
 
 describe('Problems 1 to 10', () => {
   test('11: Job Scheduling', () => {
@@ -147,6 +148,37 @@ describe('Problems 1 to 10', () => {
 
     expect(longestFilePath('dir')).toBe(0);
     expect(longestFilePath('dir\n\tfile1.txt')).toBe(13);
+  });
+
+  test('19: Maximum Values of each SubArray of Length k', () => {
+    expect(maxSubArrayLengthK([10, 5, 2, 7, 8, 7], 3)).toEqual([10, 7, 8, 8]);
+    expect(maxSubArrayLengthK([10, 5, 2, 7, 8, 7], 1)).toEqual([
+      10,
+      5,
+      2,
+      7,
+      8,
+      7
+    ]);
+
+    expect(maxSubArrayLengthK([10, 5, 2, 7, 8, 7], 2)).toEqual([
+      10,
+      5,
+      7,
+      8,
+      8
+    ]);
+    expect(maxSubArrayLengthK([11, 22], 2)).toEqual([22]);
+    expect(maxSubArrayLengthK([11, 33, 22], 3)).toEqual([33]);
+
+    expect(maxSubArrayLengthK([1, 3, -1, -3, 5, 3, 6, 7], 3)).toEqual([
+      3,
+      3,
+      5,
+      5,
+      6,
+      7
+    ]);
   });
 });
 
