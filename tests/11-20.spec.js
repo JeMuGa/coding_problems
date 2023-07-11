@@ -8,8 +8,9 @@ import selectRandomizer from "../problems/11-20/problem_16";
 import Log from "../problems/11-20/problem_17";
 import longestFilePath from "../problems/11-20/problem_18";
 import maxSubArrayLengthK from "../problems/11-20/problem_19";
+import minCostHouseColor from "../problems/11-20/problem_20";
 
-describe('Problems 1 to 10', () => {
+describe('Problems 11 to 20', () => {
   test('11: Job Scheduling', () => {
     jest.useFakeTimers();
     jest.spyOn(global, 'setTimeout');
@@ -179,6 +180,27 @@ describe('Problems 1 to 10', () => {
       6,
       7
     ]);
+  });
+
+  test('20: Paint House in Color With Minimal Cost', () => {
+    expect(minCostHouseColor([[17, 2, 17], [16, 16, 5], [14, 3, 9]])).toBe(10);
+
+    expect(
+      minCostHouseColor([
+        [8, 6, 6, 7, 5, 4],
+        [7, 7, 8, 2, 2, 2],
+        [9, 9, 4, 3, 2, 1]
+      ])
+    ).toBe(7);
+
+    expect(
+      minCostHouseColor([
+        [7, 3, 3, 8, 1, 2],
+        [2, 3, 4, 2, 4, 3],
+        [4, 5, 9, 8, 1, 6],
+        [6, 7, 9, 8, 1, 4]
+      ])
+    ).toBe(8);
   });
 });
 
