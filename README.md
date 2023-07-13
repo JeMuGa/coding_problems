@@ -350,3 +350,13 @@ Do this in O(M + N) time (where M and N are the lengths of the lists) and consta
 
 ---
 
+## Problem 22
+
+Given an array of time intervals (start, end) for classroom lectures (possibly overlapping), find the minimum number of rooms required.
+
+For example, given [(30, 75), (0, 50), (60, 150)], you should return 2.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/21-30/problem_22.js)
+
+---
+

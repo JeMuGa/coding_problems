@@ -1,6 +1,7 @@
 import LinkedListNode from "../problems/data-structures/LinkedListNode";
 
 import findIntersection from "../problems/21-30/problem_21";
+import minRooms from "../problems/21-30/problem_22";
 
 describe('Problems 21 to 30', () => {
   test('21: Intersection of Two Linked Lists', () => {
@@ -60,5 +61,14 @@ describe('Problems 21 to 30', () => {
     list1 = new LinkedListNode(1);
     list2 = null;
     expect(findIntersection(list1, list2)).toBeNull();
+  });
+
+  test('22: Minimum Rooms Required', () => {
+    expect(minRooms([[30, 75], [0, 50], [60, 150]])).toBe(2);
+    expect(minRooms([[0, 30], [5, 10], [15, 20]])).toBe(2);
+    expect(minRooms([[0, 30], [30, 40], [15, 20]])).toBe(2);
+    expect(minRooms([[0, 50], [0, 10], [0, 20]])).toBe(3);
+    expect(minRooms([[0, 30], [30, 40], [40, 50]])).toBe(1);
+    expect(minRooms([])).toBe(0);
   });
 });
