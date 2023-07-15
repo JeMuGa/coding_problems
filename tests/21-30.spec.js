@@ -4,6 +4,7 @@ import LinkedListNode from "../problems/data-structures/LinkedListNode";
 import findIntersection from "../problems/21-30/problem_21";
 import minRooms from "../problems/21-30/problem_22";
 import wordBreak from "../problems/21-30/problem_23";
+import findMinPath from "../problems/21-30/problem_24";
 
 describe('Problems 21 to 30', () => {
   test('21: Intersection of Two Linked Lists', () => {
@@ -105,5 +106,55 @@ describe('Problems 21 to 30', () => {
           ['bedbath', 'and', 'beyond']
         )
     ).toBe(true);
+  });
+  
+  test('24: Find the Minimum Path', () => {
+    expect(
+      findMinPath(
+        [[0, 0, 0, 0], [1, 1, 0, 1], [0, 0, 0, 0], [0, 0, 0, 0]],
+        [3, 0],
+        [0, 0]
+      )
+    ).toBe(7);
+
+    expect(
+      findMinPath(
+        [[0, 0, 0, 0], [1, 1, 0, 1], [0, 0, 0, 0], [0, 0, 0, 0]],
+        [3, 3],
+        [0, 0]
+      )
+    ).toBe(6);
+
+    expect(
+      findMinPath(
+        [[0, 0, 0, 0], [1, 1, 1, 1], [0, 0, 0, 0], [0, 0, 0, 0]],
+        [3, 0],
+        [0, 0]
+      )
+    ).toBe(-1);
+
+    expect(
+      findMinPath(
+        [[0, 0, 0, 0], [1, 1, 1, 1], [0, 0, 0, 0], [0, 0, 0, 0]],
+        [0, 0],
+        [0, 3]
+      )
+    ).toBe(3);
+
+    expect(
+      findMinPath(
+        [[0, 0, 0, 0], [1, 1, 1, 1], [0, 0, 0, 0], [0, 0, 0, 0]],
+        [3, 0],
+        [3, 0]
+      )
+    ).toBe(0);
+
+    expect(
+      findMinPath(
+        [[0, 0, 0, 0], [1, 1, 1, 1], [0, 0, 0, 0], [0, 0, 0, 0]],
+        [3, 0],
+        [3, 3]
+      )
+    ).toBe(3);
   });
 });
