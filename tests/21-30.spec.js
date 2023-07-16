@@ -5,6 +5,7 @@ import findIntersection from "../problems/21-30/problem_21";
 import minRooms from "../problems/21-30/problem_22";
 import wordBreak from "../problems/21-30/problem_23";
 import findMinPath from "../problems/21-30/problem_24";
+import { LockingTreeNode, isLocked, lock, unlock } from "../problems/21-30/problem_25";
 
 describe('Problems 21 to 30', () => {
   test('21: Intersection of Two Linked Lists', () => {
@@ -156,5 +157,54 @@ describe('Problems 21 to 30', () => {
         [3, 3]
       )
     ).toBe(3);
+  });
+
+  test('25: Locking Binary Trees', () => {
+    const a = new LockingTreeNode('a');
+    const b = new LockingTreeNode('b');
+    const c = new LockingTreeNode('c');
+    const d = new LockingTreeNode('d');
+    const e = new LockingTreeNode('e');
+    const f = new LockingTreeNode('f');
+    const g = new LockingTreeNode('g');
+
+    a.left = b;
+    a.right = c;
+    b.parent = a;
+    c.parent = a;
+
+    b.left = d;
+    b.right = e;
+    d.parent = b;
+    e.parent = b;
+
+    c.left = f;
+    f.parent = c;
+
+    f.right = g;
+    g.parent = f;
+
+    expect(lock(g)).toBe(true);
+    expect(isLocked(g)).toBe(true);
+    expect(isLocked(a)).toBe(false);
+    expect(lock(a)).toBe(false);
+    expect(unlock(g)).toBe(true);
+    expect(isLocked(g)).toBe(false);
+    expect(isLocked(a)).toBe(false);
+    expect(lock(a)).toBe(true);
+    expect(isLocked(g)).toBe(false);
+    expect(isLocked(a)).toBe(true);
+    expect(unlock(a)).toBe(true);
+    expect(unlock(g)).toBe(false);
+    expect(unlock(a)).toBe(false);
+    expect(isLocked(g)).toBe(false);
+    expect(isLocked(a)).toBe(false);
+
+    expect(lock(g)).toBe(true);
+    expect(lock(c)).toBe(false);
+    expect(isLocked(g)).toBe(true);
+    expect(isLocked(c)).toBe(false);
+    expect(lock(b)).toBe(true);
+    expect(lock(a)).toBe(false);
   });
 });
