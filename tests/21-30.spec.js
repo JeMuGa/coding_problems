@@ -6,6 +6,7 @@ import minRooms from "../problems/21-30/problem_22";
 import wordBreak from "../problems/21-30/problem_23";
 import findMinPath from "../problems/21-30/problem_24";
 import { LockingTreeNode, isLocked, lock, unlock } from "../problems/21-30/problem_25";
+import matchesRegularExpression from "../problems/21-30/problem_26";
 
 describe('Problems 21 to 30', () => {
   test('21: Intersection of Two Linked Lists', () => {
@@ -207,4 +208,22 @@ describe('Problems 21 to 30', () => {
     expect(lock(b)).toBe(true);
     expect(lock(a)).toBe(false);
   });
+ 
+  test('26: Regular Expression', () => {
+    expect(matchesRegularExpression('ra.', 'ray')).toBe(true);
+    expect(matchesRegularExpression('.*at', 'chat')).toBe(true);
+    expect(matchesRegularExpression('.*at', 'chats')).toBe(false);
+    expect(matchesRegularExpression('a', 'aa')).toBe(false);
+    expect(matchesRegularExpression('a*', 'a')).toBe(true);
+    expect(matchesRegularExpression('.*', 'ab')).toBe(true);
+    expect(matchesRegularExpression('c*a*b', 'aab')).toBe(true);
+    expect(matchesRegularExpression('mis*is*p*', 'mississippi')).toBe(false);
+    expect(matchesRegularExpression('ab*a*c*a', 'aaa')).toBe(true);
+    expect(
+      matchesRegularExpression(
+        'aasdf.*asdf.*asdf.*asdf.*s',
+        'aasdfasdfasdfasdfas'
+      )
+    ).toBe(true);
+  }); 
 });
