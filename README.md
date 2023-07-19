@@ -449,3 +449,15 @@ Do this in constant space and in one pass.
 [Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/21-30/problem_27.js)
 
 ---
+
+## Problem 28
+
+Given a string of round, curly, and square open and closing brackets, return whether the brackets are balanced (well-formed).
+
+For example, given the string `"([])[]({})"`, you should return true.
+
+Given the string `"([)]"` or `"((()"`, you should return false.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/21-30/problem_28.js)
+
+---

@@ -8,6 +8,7 @@ import findMinPath from "../problems/21-30/problem_24";
 import { LockingTreeNode, isLocked, lock, unlock } from "../problems/21-30/problem_25";
 import matchesRegularExpression from "../problems/21-30/problem_26";
 import removeKthLast from "../problems/21-30/problem_27";
+import validBrackets from "../problems/21-30/problem_28";
 
 describe('Problems 21 to 30', () => {
   test('21: Intersection of Two Linked Lists', () => {
@@ -252,5 +253,16 @@ describe('Problems 21 to 30', () => {
     expect(list.next.next.val).toBe(3);
     expect(list.next.next.next.val).toBe(5);
     expect(list.next.next.next.next).toBeNull();
+  });
+
+  test('28: Valid Brackets', () => {
+    expect(validBrackets('([])[]({})')).toBe(true);
+    expect(validBrackets('([)]')).toBe(false);
+    expect(validBrackets('((()')).toBe(false);
+    expect(validBrackets('()')).toBe(true);
+    expect(validBrackets('()[]{}')).toBe(true);
+    expect(validBrackets('(]')).toBe(false);
+    expect(validBrackets('([)]')).toBe(false);
+    expect(validBrackets('{[]}')).toBe(true);
   });
 });
