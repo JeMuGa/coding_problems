@@ -437,3 +437,15 @@ Given the regular expression ".*at" and the string "chat", your function should 
 [Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/21-30/problem_26.js)
 
 ---
+
+## Problem 27
+
+Given a singly linked list and an integer k, remove the kth last element from the list. k is guaranteed to be smaller than the length of the list.
+
+The list is very long, so making more than one pass is prohibitively expensive.
+
+Do this in constant space and in one pass.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/21-30/problem_27.js)
+
+---

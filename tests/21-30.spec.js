@@ -7,6 +7,7 @@ import wordBreak from "../problems/21-30/problem_23";
 import findMinPath from "../problems/21-30/problem_24";
 import { LockingTreeNode, isLocked, lock, unlock } from "../problems/21-30/problem_25";
 import matchesRegularExpression from "../problems/21-30/problem_26";
+import removeKthLast from "../problems/21-30/problem_27";
 
 describe('Problems 21 to 30', () => {
   test('21: Intersection of Two Linked Lists', () => {
@@ -226,4 +227,30 @@ describe('Problems 21 to 30', () => {
       )
     ).toBe(true);
   }); 
+
+  test('27: Remove Kth Last in Linked List', () => {
+    let list = new LinkedListNode(1);
+    list.next = new LinkedListNode(2);
+    list.next.next = new LinkedListNode(3);
+    list.next.next.next = new LinkedListNode(4);
+    list.next.next.next.next = new LinkedListNode(5);
+
+    list = removeKthLast(list, 2);
+    expect(list.val).toBe(1);
+    expect(list.next.val).toBe(2);
+    expect(list.next.next.val).toBe(3);
+    expect(list.next.next.next.val).toBe(5);
+    expect(list.next.next.next.next).toBeNull();
+
+    const newHead = new LinkedListNode(0);
+    newHead.next = list;
+    list = newHead;
+
+    list = removeKthLast(list, 5);
+    expect(list.val).toBe(1);
+    expect(list.next.val).toBe(2);
+    expect(list.next.next.val).toBe(3);
+    expect(list.next.next.next.val).toBe(5);
+    expect(list.next.next.next.next).toBeNull();
+  });
 });
