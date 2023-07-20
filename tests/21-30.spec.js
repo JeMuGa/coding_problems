@@ -9,6 +9,7 @@ import { LockingTreeNode, isLocked, lock, unlock } from "../problems/21-30/probl
 import matchesRegularExpression from "../problems/21-30/problem_26";
 import removeKthLast from "../problems/21-30/problem_27";
 import validBrackets from "../problems/21-30/problem_28";
+import textJustification from "../problems/21-30/problem_29";
 
 describe('Problems 21 to 30', () => {
   test('21: Intersection of Two Linked Lists', () => {
@@ -264,5 +265,14 @@ describe('Problems 21 to 30', () => {
     expect(validBrackets('(]')).toBe(false);
     expect(validBrackets('([)]')).toBe(false);
     expect(validBrackets('{[]}')).toBe(true);
+  });
+
+  test('29: Text Justification', () => {
+    expect(
+      textJustification(
+        ['the', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog'],
+        16
+      )
+    ).toEqual(['the  quick brown', 'fox  jumps  over', 'the   lazy   dog']);
   });
 });
