@@ -10,6 +10,7 @@ import matchesRegularExpression from "../problems/21-30/problem_26";
 import removeKthLast from "../problems/21-30/problem_27";
 import validBrackets from "../problems/21-30/problem_28";
 import textJustification from "../problems/21-30/problem_29";
+import { stringDecoding, stringEncoding } from "../problems/21-30/problem_30";
 
 describe('Problems 21 to 30', () => {
   test('21: Intersection of Two Linked Lists', () => {
@@ -274,5 +275,25 @@ describe('Problems 21 to 30', () => {
         16
       )
     ).toEqual(['the  quick brown', 'fox  jumps  over', 'the   lazy   dog']);
+  });
+
+  test('30: String Encoding and Decoding', () => {
+    expect(stringEncoding('A')).toBe('1A');
+    expect(stringEncoding('AA')).toBe('2A');
+    expect(stringEncoding('AAB')).toBe('2A1B');
+    expect(stringEncoding('AABC')).toBe('2A1B1C');
+
+    expect(stringDecoding('1A')).toBe('A');
+    expect(stringDecoding('2A')).toBe('AA');
+    expect(stringDecoding('2A1B')).toBe('AAB');
+    expect(stringDecoding('2A1B1C')).toBe('AABC');
+    expect(stringDecoding('15A')).toBe('AAAAAAAAAAAAAAA');
+    expect(stringDecoding('15A1B')).toBe('AAAAAAAAAAAAAAAB');
+
+    expect(stringEncoding('AAAABBBCCDAA')).toBe('4A3B2C1D2A');
+    expect(stringDecoding('4A3B2C1D2A')).toBe('AAAABBBCCDAA');
+
+    expect(stringDecoding(stringEncoding('AAAABBBCCDAA'))).toBe('AAAABBBCCDAA');
+    expect(stringEncoding(stringDecoding('4A3B2C1D2A'))).toBe('4A3B2C1D2A');
   });
 });
