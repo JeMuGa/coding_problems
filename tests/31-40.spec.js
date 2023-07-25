@@ -1,6 +1,7 @@
 import trappingRainWater from "../problems/31-40/problem_31";
 import editDistance from "../problems/31-40/problem_32";
 import doesArbitrageExist from "../problems/31-40/problem_33";
+import runningMedian from "../problems/31-40/problem_34";
 
 describe('Problems 31 to 40', () => {
   test('31: Trapping Rain Water', () => {
@@ -34,5 +35,18 @@ describe('Problems 31 to 40', () => {
         [1.0567, 0.8609, 0.6767, 83.12, 1.0339, 1.0487, 1]
       ])
     ).toBe(true);
+  });
+
+  test('34: Find Median from Data Stream', () => {
+    expect(runningMedian([2, 1, 5, 7, 2, 0, 5])).toEqual([
+      2,
+      1.5,
+      2,
+      3.5,
+      2,
+      2,
+      2
+    ]);
+    expect(runningMedian([1, 2, 3])).toEqual([1, 1.5, 2]);
   });
 });
