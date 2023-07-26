@@ -2,6 +2,7 @@ import trappingRainWater from "../problems/31-40/problem_31";
 import editDistance from "../problems/31-40/problem_32";
 import doesArbitrageExist from "../problems/31-40/problem_33";
 import runningMedian from "../problems/31-40/problem_34";
+import buildPalindromeByFewestInsertions from "../problems/31-40/problem_35";
 
 describe('Problems 31 to 40', () => {
   test('31: Trapping Rain Water', () => {
@@ -48,5 +49,14 @@ describe('Problems 31 to 40', () => {
       2
     ]);
     expect(runningMedian([1, 2, 3])).toEqual([1, 1.5, 2]);
+  });
+
+  test('35: Build Palindrome With Fewest Insertions', () => {
+    expect(buildPalindromeByFewestInsertions('race')).toBe('ecarace');
+    expect(buildPalindromeByFewestInsertions('google')).toBe('elgoogle');
+    expect(buildPalindromeByFewestInsertions('racecar')).toBe('racecar');
+    expect(buildPalindromeByFewestInsertions('aacecaaa')).toBe('aaacecaaa');
+    expect(buildPalindromeByFewestInsertions('aaaecaaa')).toBe('aaacecaaa');
+    expect(buildPalindromeByFewestInsertions('abcd')).toBe('abcdcba');
   });
 });
