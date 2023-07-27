@@ -3,6 +3,7 @@ import editDistance from "../problems/31-40/problem_32";
 import doesArbitrageExist from "../problems/31-40/problem_33";
 import runningMedian from "../problems/31-40/problem_34";
 import buildPalindromeByFewestInsertions from "../problems/31-40/problem_35";
+import sortColors from "../problems/31-40/problem_36";
 
 describe('Problems 31 to 40', () => {
   test('31: Trapping Rain Water', () => {
@@ -58,5 +59,35 @@ describe('Problems 31 to 40', () => {
     expect(buildPalindromeByFewestInsertions('aacecaaa')).toBe('aaacecaaa');
     expect(buildPalindromeByFewestInsertions('aaaecaaa')).toBe('aaacecaaa');
     expect(buildPalindromeByFewestInsertions('abcd')).toBe('abcdcba');
+  });
+
+  test('36: Sort Colors', () => {
+    let colors = ['G', 'B', 'R', 'R', 'B', 'R', 'G'];
+    sortColors(colors);
+    expect(colors).toEqual(['R', 'R', 'R', 'G', 'G', 'B', 'B']);
+
+    colors = ['B', 'R', 'B', 'G', 'G', 'R'];
+    sortColors(colors);
+    expect(colors).toEqual(['R', 'R', 'G', 'G', 'B', 'B']);
+
+    colors = ['B', 'B', 'B', 'G', 'R', 'R'];
+    sortColors(colors);
+    expect(colors).toEqual(['R', 'R', 'G', 'B', 'B', 'B']);
+
+    colors = ['B', 'B', 'B'];
+    sortColors(colors);
+    expect(colors).toEqual(['B', 'B', 'B']);
+
+    colors = ['R', 'R', 'R'];
+    sortColors(colors);
+    expect(colors).toEqual(['R', 'R', 'R']);
+
+    colors = ['G', 'G', 'G'];
+    sortColors(colors);
+    expect(colors).toEqual(['G', 'G', 'G']);
+
+    colors = ['R', 'B', 'G'];
+    sortColors(colors);
+    expect(colors).toEqual(['R', 'G', 'B']);
   });
 });
