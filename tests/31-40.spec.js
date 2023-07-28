@@ -1,9 +1,12 @@
+import TreeNode from "../problems/data-structures/TreeNode";
+
 import trappingRainWater from "../problems/31-40/problem_31";
 import editDistance from "../problems/31-40/problem_32";
 import doesArbitrageExist from "../problems/31-40/problem_33";
 import runningMedian from "../problems/31-40/problem_34";
 import buildPalindromeByFewestInsertions from "../problems/31-40/problem_35";
 import sortColors from "../problems/31-40/problem_36";
+import secondLargest from "../problems/31-40/problem_37";
 
 describe('Problems 31 to 40', () => {
   test('31: Trapping Rain Water', () => {
@@ -89,5 +92,37 @@ describe('Problems 31 to 40', () => {
     colors = ['R', 'B', 'G'];
     sortColors(colors);
     expect(colors).toEqual(['R', 'G', 'B']);
+  });
+
+  test('37: Second Largest Element in Binary Search Tree', () => {
+    let bst = new TreeNode(20);
+    bst.left = new TreeNode(8);
+    bst.right = new TreeNode(22);
+    bst.left.left = new TreeNode(4);
+    bst.left.right = new TreeNode(12);
+    bst.right.left = new TreeNode(21);
+    bst.left.right.left = new TreeNode(10);
+    bst.left.right.right = new TreeNode(14);
+
+    expect(secondLargest(bst).val).toBe(21);
+
+    bst = new TreeNode(20);
+    bst.left = new TreeNode(8);
+    bst.right = new TreeNode(22);
+    bst.left.left = new TreeNode(4);
+    bst.left.right = new TreeNode(12);
+    bst.left.right.left = new TreeNode(10);
+    bst.left.right.right = new TreeNode(14);
+
+    expect(secondLargest(bst).val).toBe(20);
+
+    bst = new TreeNode(20);
+    bst.left = new TreeNode(8);
+    bst.left.left = new TreeNode(4);
+    bst.left.right = new TreeNode(12);
+    bst.left.right.left = new TreeNode(10);
+    bst.left.right.right = new TreeNode(14);
+
+    expect(secondLargest(bst).val).toBe(14);
   });
 });
