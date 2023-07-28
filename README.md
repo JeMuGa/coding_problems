@@ -587,3 +587,13 @@ For example, given the array ['G', 'B', 'R', 'R', 'B', 'R', 'G'], it should beco
 [Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/31-40/problem_36.js)
 
 ---
+
+## Problem 37
+
+This problem was asked by Dropbox.
+
+Given the root to a binary search tree, find the second largest node in the tree.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/31-40/problem_37.js)
+
+---
