@@ -7,6 +7,7 @@ import runningMedian from "../problems/31-40/problem_34";
 import buildPalindromeByFewestInsertions from "../problems/31-40/problem_35";
 import sortColors from "../problems/31-40/problem_36";
 import secondLargest from "../problems/31-40/problem_37";
+import powerSet from "../problems/31-40/problem_38";
 
 describe('Problems 31 to 40', () => {
   test('31: Trapping Rain Water', () => {
@@ -124,5 +125,37 @@ describe('Problems 31 to 40', () => {
     bst.left.right.right = new TreeNode(14);
 
     expect(secondLargest(bst).val).toBe(14);
+  });
+
+  test('38: Power Set', () => {
+    expect(powerSet([1, 2, 3])).toEqual(
+      expect.arrayContaining([
+        [],
+        [1],
+        [2],
+        [3],
+        [1, 2],
+        [1, 3],
+        [2, 3],
+        [1, 2, 3]
+      ])
+    );
+    expect(powerSet([1, 2, 3])).toHaveLength(8);
+
+    expect(powerSet([1, 2])).toEqual(
+      expect.arrayContaining([[], [1], [2], [1, 2]])
+    );
+    expect(powerSet([1, 2])).toHaveLength(4);
+
+    expect(powerSet([1])).toEqual(expect.arrayContaining([[], [1]]));
+    expect(powerSet([1])).toHaveLength(2);
+
+    expect(powerSet([])).toEqual(expect.arrayContaining([[]]));
+    expect(powerSet([])).toHaveLength(1);
+
+    expect(powerSet([1, 2, 2])).toEqual(
+      expect.arrayContaining([[2], [1], [1, 2, 2], [2, 2], [1, 2], []])
+    );
+    expect(powerSet([1, 2, 2])).toHaveLength(6);
   });
 });
