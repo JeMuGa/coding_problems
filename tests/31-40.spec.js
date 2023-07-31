@@ -8,6 +8,7 @@ import buildPalindromeByFewestInsertions from "../problems/31-40/problem_35";
 import sortColors from "../problems/31-40/problem_36";
 import secondLargest from "../problems/31-40/problem_37";
 import powerSet from "../problems/31-40/problem_38";
+import totalNQueens from "../problems/31-40/problem_39";
 
 describe('Problems 31 to 40', () => {
   test('31: Trapping Rain Water', () => {
@@ -157,5 +158,14 @@ describe('Problems 31 to 40', () => {
       expect.arrayContaining([[2], [1], [1, 2, 2], [2, 2], [1, 2], []])
     );
     expect(powerSet([1, 2, 2])).toHaveLength(6);
+  });
+
+  test('39: Total N Queens', () => {
+    expect(totalNQueens(4)).toBe(2);
+    expect(totalNQueens(3)).toBe(0);
+    expect(totalNQueens(5)).toBe(10);
+    expect(totalNQueens(6)).toBe(4);
+    expect(totalNQueens(2)).toBe(0);
+    expect(totalNQueens(1)).toBe(1);
   });
 });
