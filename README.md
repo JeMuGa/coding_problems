@@ -615,7 +615,7 @@ You may also use a list or array to represent a set.
 You have an N by N board. Write a function that, given N, returns the number of possible arrangements of the board
 where N queens can be placed on the board without threatening each other, i.e. no two queens share the same row, column, or diagonal.
 
-[solution](https://github.com/jemuga/coding_problems/blob/main/problems/31-40/problem_39.js)
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/31-40/problem_39.js)
 
 ---
 
@@ -636,7 +636,7 @@ i.e. from the top-leftmost live cell to bottom-rightmost live cell.
 
 You can represent a live cell with an asterisk (*) and a dead cell with a dot (.).
 
-[Solution](https://github.com/Li-Victor/daily-coding-problem/blob/master/solutions/31-40/Problem39.js)
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/31-40/problem_40.js)
 
 ---
 
