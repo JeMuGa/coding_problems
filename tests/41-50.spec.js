@@ -2,7 +2,7 @@ import singleNumber from "../problems/41-50/problem_41";
 import constructItinerary from "../problems/41-50/problem_42";
 import subsetSum from "../problems/41-50/problem_43";
 import MaxStack from "../problems/41-50/problem_44";
-import countInversions from "../problems/41-50/probmen_45";
+import countInversions from "../problems/41-50/problem_45";
 
 describe('Problems 41 to 50', () => {
   test('41: Single Number', () => {
