@@ -708,3 +708,12 @@ For example, a sorted list has zero inversions. The array [2, 4, 1, 3, 5] has th
 [Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/41-50/problem_45.js)
 
 ---
+
+## Problem 46
+
+Using a function rand5() that returns an integer from 1 to 5 (inclusive) with uniform probability,
+implement a function rand7() that returns an integer from 1 to 7 (inclusive).
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/41-50/problem_46.js)
+
+---
