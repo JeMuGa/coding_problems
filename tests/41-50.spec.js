@@ -4,6 +4,7 @@ import subsetSum from "../problems/41-50/problem_43";
 import MaxStack from "../problems/41-50/problem_44";
 import countInversions from "../problems/41-50/problem_45";
 import longestPalindrome from "../problems/41-50/problem_47";
+import maxProfit from "../problems/41-50/problem_48";
 
 describe('Problems 41 to 50', () => {
   test('41: Single Number', () => {
@@ -106,5 +107,11 @@ describe('Problems 41 to 50', () => {
     expect(['a', 'b', 'c', 'd']).toEqual(
       expect.arrayContaining([longestPalindrome('abcd')])
     );
+  });
+
+  test('48: Best Time To Buy and Sell Stock', () => {
+    expect(maxProfit([9, 11, 8, 5, 7, 10])).toBe(5);
+    expect(maxProfit([7, 6, 4, 3, 1])).toBe(0);
+    expect(maxProfit([])).toBe(0);
   });
 });
