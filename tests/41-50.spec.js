@@ -3,6 +3,7 @@ import constructItinerary from "../problems/41-50/problem_42";
 import subsetSum from "../problems/41-50/problem_43";
 import MaxStack from "../problems/41-50/problem_44";
 import countInversions from "../problems/41-50/problem_45";
+import longestPalindrome from "../problems/41-50/problem_47";
 
 describe('Problems 41 to 50', () => {
   test('41: Single Number', () => {
@@ -91,5 +92,19 @@ describe('Problems 41 to 50', () => {
     expect(countInversions([1, 2, 3, 4, 5])).toBe(0);
     expect(countInversions([2, 4, 1, 3, 5])).toBe(3);
     expect(countInversions([5, 4, 3, 2, 1])).toBe(10);
+  });
+
+  test('47: Longest Palindrome', () => {
+    expect(longestPalindrome('aabcdcb')).toBe('bcdcb');
+    expect(longestPalindrome('bananas')).toBe('anana');
+    expect(longestPalindrome('banana')).toBe('anana');
+    expect(longestPalindrome('bbbbccc')).toBe('bbbb');
+    expect(longestPalindrome('cbbd')).toBe('bb');
+    expect(['aba', 'bab']).toEqual(
+      expect.arrayContaining([longestPalindrome('babad')])
+    );
+    expect(['a', 'b', 'c', 'd']).toEqual(
+      expect.arrayContaining([longestPalindrome('abcd')])
+    );
   });
 });

@@ -717,3 +717,15 @@ implement a function rand7() that returns an integer from 1 to 7 (inclusive).
 [Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/41-50/problem_46.js)
 
 ---
+
+## Problem 47
+
+Given a string, find the longest palindromic contiguous substring.
+If there are more than one with the maximum length, return any one.
+
+For example, the longest palindromic substring of "aabcdcb" is "bcdcb".
+The longest palindromic substring of "bananas" is "anana".
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/41-50/problem_47.js)
+
+---
