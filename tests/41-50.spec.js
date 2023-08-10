@@ -1,6 +1,7 @@
 import singleNumber from "../problems/41-50/problem_41";
 import constructItinerary from "../problems/41-50/problem_42";
 import subsetSum from "../problems/41-50/problem_43";
+import MaxStack from "../problems/41-50/problem_44";
 
 describe('Problems 41 to 50', () => {
   test('41: Single Number', () => {
@@ -68,5 +69,20 @@ describe('Problems 41 to 50', () => {
     expect(subsetSum([2, 3, 7, 8, 10], 30)).toEqual([2, 3, 7, 8, 10]);
 
     expect(subsetSum([2, 3, 7, 8, 10], 14)).toBeNull();
+  });
+
+  test('44: Max Stack', () => {
+    const maxStack = new MaxStack();
+    maxStack.push(-2);
+    maxStack.push(0);
+    maxStack.push(-3);
+    expect(maxStack.max()).toBe(0);
+    expect(maxStack.pop()).toBe(-3);
+    expect(maxStack.max()).toBe(0);
+    expect(maxStack.pop()).toBe(0);
+    expect(maxStack.max()).toBe(-2);
+    expect(maxStack.pop()).toBe(-2);
+    expect(maxStack.max()).toBeNull();
+    expect(maxStack.pop()).toBeNull();
   });
 });
