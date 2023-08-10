@@ -2,6 +2,7 @@ import singleNumber from "../problems/41-50/problem_41";
 import constructItinerary from "../problems/41-50/problem_42";
 import subsetSum from "../problems/41-50/problem_43";
 import MaxStack from "../problems/41-50/problem_44";
+import countInversions from "../problems/41-50/probmen_45";
 
 describe('Problems 41 to 50', () => {
   test('41: Single Number', () => {
@@ -84,5 +85,11 @@ describe('Problems 41 to 50', () => {
     expect(maxStack.pop()).toBe(-2);
     expect(maxStack.max()).toBeNull();
     expect(maxStack.pop()).toBeNull();
+  });
+
+  test('45: Count Inversions', () => {
+    expect(countInversions([1, 2, 3, 4, 5])).toBe(0);
+    expect(countInversions([2, 4, 1, 3, 5])).toBe(3);
+    expect(countInversions([5, 4, 3, 2, 1])).toBe(10);
   });
 });
