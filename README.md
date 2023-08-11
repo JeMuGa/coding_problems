@@ -742,3 +742,30 @@ since you could buy the stock at 5 dollars and sell it at 10 dollars.
 [Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/41-50/problem_48.js)
 
 ---
+
+## Problem 49
+
+Given pre-order and in-order traversals of a binary tree, write a function to reconstruct the tree.
+
+For example, given the following preorder traversal:
+
+[a, b, d, e, c, f, g]
+
+And the following inorder traversal:
+
+[d, b, e, a, f, c, g]
+
+You should return the following tree:
+
+```
+    a
+   / \
+  b   c
+ / \ / \
+d  e f  g
+```
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/41-50/problem_49.js)
+
+---
+
