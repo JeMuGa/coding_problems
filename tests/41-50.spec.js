@@ -8,6 +8,7 @@ import countInversions from "../problems/41-50/problem_45";
 import longestPalindrome from "../problems/41-50/problem_47";
 import maxProfit from "../problems/41-50/problem_48";
 import constructTree from "../problems/41-50/problem_49";
+import maxSumSubarray from "../problems/41-50/problem_50";
 
 describe('Problems 41 to 50', () => {
   test('41: Single Number', () => {
@@ -141,5 +142,11 @@ describe('Problems 41 to 50', () => {
     expect(
       constructTree(['a', 'b', 'c', 'd', 'e'], ['b', 'a', 'd', 'c', 'e'])
     ).toEqual(tree1);
+  });
+
+  test('50: Maximum Sum Subarray', () => {
+    expect(maxSumSubarray([34, -50, 42, 14, -5, 86])).toBe(137);
+    expect(maxSumSubarray([-5, -1, -8, -9])).toBe(0);
+    expect(maxSumSubarray([-2, 1, -3, 4, -1, 2, 1, -5, 4])).toBe(6);
   });
 });
