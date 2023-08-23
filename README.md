@@ -903,7 +903,7 @@ For example, given the multiset {15, 5, 20, 10, 35, 15, 10}, it would return tru
 
 Given the multiset {15, 5, 20, 10, 35}, it would return false, since we can't split it up into two subsets that add up to the same sum.
 
-[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/61-70/problem_60.js)
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/51-60/problem_60.js)
 
 ---
 
