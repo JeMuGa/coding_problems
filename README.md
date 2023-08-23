@@ -805,3 +805,132 @@ You should return 45, as it is (3 + 2) * (4 + 5).
 
 ---
 
+## Problem 52
+
+Given a function that generates perfectly random numbers between 1 and k (inclusive), where k is an input, write a function that shuffles a deck of cards represented as an array using only swaps.
+
+It should run in O(N) time.
+
+Hint: Make sure each one of the 52! permutations of the deck is equally likely.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/51-60/problem_52.js)
+
+---
+
+## Problem 53
+
+Implement an LRU (Least Recently Used) cache. It should be able to be initialized with a cache size n, and contain the following methods:
+
+- set(key, value): sets key to value. If there are already n items in the cache and we are adding a new item, then it should also remove the least recently used item.
+- get(key): gets the value at key. If no such key exists, return null.
+
+Each operation should run in O(1) time.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/51-60/problem_53.js)
+
+---
+
+## Problem 54
+
+Implement a queue using two stacks. Recall that a queue is a FIFO (first-in, first-out) data structure with the following methods: enqueue, which inserts an element into the queue, and dequeue, which removes it.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/51-60/problem_54.js)
+
+---
+
+## Problem 55
+
+Sudoku is a puzzle where you're given a partially-filled 9 by 9 grid with digits. The objective is to fill the grid with the constraint that every row, column, and box (3 by 3 subgrid) must contain all of the digits from 1 to 9.
+
+Implement an efficient sudoku solver.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/51-60/problem_55.js)
+
+---
+
+## Problem 56
+
+Implement a URL shortener with the following methods:
+
+- shorten(url), which shortens the url into a six-character alphanumeric string, such as zLg6wl.
+- restore(short), which expands the shortened string into the original url. If no such shortened string exists, return null.
+
+Hint: What if we enter the same URL twice?
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/51-60/problem_56.js)
+
+---
+
+## Problem 57
+
+Given an undirected graph represented as an adjacency matrix and an integer k, write a function to determine whether each vertex in the graph can be colored such that no two adjacent vertices share the same color using at most k colors.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/51-60/problem_57.js)
+
+---
+
+## Problem 58
+
+Given a string s and an integer k, break up the string into multiple texts such that each text has a length of k or less. You must break it up so that words don't break across lines. If there's no way to break the text up, then return null.
+
+You can assume that there are no spaces at the ends of the string and that there is exactly one space between each word.
+
+For example, given the string "the quick brown fox jumps over the lazy dog" and k = 10, you should return: ["the quick", "brown fox", "jumps over", "the lazy", "dog"]. No string in the list has a length of more than 10.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/51-60/problem_58.js)
+
+---
+
+## Problem 59
+
+An sorted array of integers was rotated an unknown number of times.
+
+Given such an array, find the index of the element in the array in faster than linear time. If the element doesn't exist in the array, return null.
+
+For example, given the array [13, 18, 25, 2, 8, 10] and the element 8, return 4 (the index of 8 in the array).
+
+You can assume all the integers in the array are unique.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/51-60/problem_59.js)
+
+---
+
+## Problem 60
+
+Given a multiset of integers, return whether it can be partitioned into two subsets whose sums are the same.
+
+For example, given the multiset {15, 5, 20, 10, 35, 15, 10}, it would return true, since we can split it up into {15, 5, 10, 15, 10} and {20, 35}, which both add up to 55.
+
+Given the multiset {15, 5, 20, 10, 35}, it would return false, since we can't split it up into two subsets that add up to the same sum.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/61-70/problem_60.js)
+
+---
+
+## Problem 61
+
+Implement integer exponentiation. That is, implement the pow(x, y) function, where x and y are integers and returns x^y.
+
+Do this faster than the naive method of repeated multiplication.
+
+For example, pow(2, 10) should return 1024.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/61-70/problem_61.js)
+
+---
+
+## Problem 62
+
+There is an N by M matrix of zeroes. Given N and M, write a function to count the number of ways of starting at the top-left corner and getting to the bottom-right corner. You can only move right or down.
+
+For example, given a 2 by 2 matrix, you should return 2, since there are two ways to get to the bottom-right:
+
+- Right, then down
+- Down, then right
+
+Given a 5 by 5 matrix, there are 70 ways to get to the bottom-right.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/61-70/problem_62.js)
+
+---
+
