@@ -934,3 +934,512 @@ Given a 5 by 5 matrix, there are 70 ways to get to the bottom-right.
 
 ---
 
+## Problem 63
+
+Given a 2D matrix of characters and a target word, write a function that returns whether the word can be found in the matrix by going left-to-right, or up-to-down.
+
+For example, given the following matrix:
+
+```
+[['F', 'A', 'C', 'I'],
+ ['O', 'B', 'Q', 'P'],
+ ['A', 'N', 'O', 'B'],
+ ['M', 'A', 'S', 'S']]
+```
+
+and the target word 'FOAM', you should return true, since it's the leftmost column. Similarly, given the target word 'MASS', you should return true, since it's the last row.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/61-70/problem_63.js)
+
+---
+
+## Problem 64
+
+A knight's tour is a sequence of moves by a knight on a chessboard such that all squares are visited once.
+
+Given N, write a function to return the number of knight's tours on an N by N chessboard.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/61-70/problem_64.js)
+
+---
+
+## Problem 65
+
+Given a N by M matrix of numbers, print out the matrix in a clockwise spiral.
+
+For example, given the following matrix:
+
+```
+[[1,  2,  3,  4,  5],
+ [6,  7,  8,  9,  10],
+ [11, 12, 13, 14, 15],
+ [16, 17, 18, 19, 20]]
+```
+
+You should print out the following:
+
+```
+1
+2
+3
+4
+5
+10
+15
+20
+19
+18
+17
+16
+11
+6
+7
+8
+9
+14
+13
+12
+```
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/61-70/problem_65.js)
+
+---
+
+## Problem 66
+
+Assume you have access to a function toss_biased() which returns 0 or 1 with a probability that's not 50-50 (but also not 0-100 or 100-0). You do not know the bias of the coin.
+
+Write a function to simulate an unbiased coin toss.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/61-70/problem_66.js)
+
+---
+
+## Problem 67
+
+Implement an LFU (Least Frequently Used) cache. It should be able to be initialized with a cache size n, and contain the following methods:
+
+- set(key, value): sets key to value. If there are already n items in the cache and we are adding a new item, then it should also remove the least frequently used item. If there is a tie, then the least recently used key should be removed.
+- get(key): gets the value at key. If no such key exists, return null.
+
+Each operation should run in O(1) time
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/61-70/problem_67.js)
+
+---
+
+## Problem 68
+
+On our special chessboard, two bishops attack each other if they share the same diagonal. This includes bishops that have another bishop located between them, i.e. bishops can attack through pieces.
+
+You are given N bishops, represented as (row, column) tuples on a M by M chessboard. Write a function to count the number of pairs of bishops that attack each other. The ordering of the pair doesn't matter: (1, 2) is considered the same as (2, 1).
+
+For example, given M = 5 and the list of bishops:
+```
+(0, 0)
+(1, 2)
+(2, 2)
+(4, 0)
+```
+
+The board would look like this:
+
+```
+[b 0 0 0 0]
+[0 0 b 0 0]
+[0 0 b 0 0]
+[0 0 0 0 0]
+[b 0 0 0 0]
+```
+
+You should return 2, since bishops 1 and 3 attack each other, as well as bishops 3 and 4.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/61-70/problem_68.js)
+
+---
+
+## Problem 69
+
+Given a list of integers, return the largest product that can be made by multiplying any three integers.
+
+For example, if the list is [-10, -10, 5, 2], we should return 500, since that's -10 * -10 * 5.
+
+You can assume the list has at least three integers.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/61-70/problem_69.js)
+
+---
+
+## Problem 70
+
+A number is considered perfect if its digits sum up to exactly 10.
+
+Given a positive integer n, return the n-th perfect number.
+
+For example, given 1, you should return 19. Given 2, you should return 28.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/61-70/problem_70.js)
+
+---
+
+## Problem 71
+
+Using a function rand7() that returns an integer from 1 to 7 (inclusive) with uniform probability, implement a function rand5() that returns an integer from 1 to 5 (inclusive).
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/71-80/problem_71.js)
+
+---
+
+## Problem 72
+
+In a directed graph, each node is assigned an uppercase letter. We define a path's value as the number of most frequently-occurring letter along that path. For example, if a path in the graph goes through "ABACA", the value of the path is 3, since there are 3 occurrences of 'A' on the path.
+
+Given a graph with n nodes and m directed edges, return the largest value path of the graph. If the largest value is infinite, then return null.
+
+The graph is represented with a string and an edge list. The i-th character represents the uppercase letter of the i-th node. Each tuple in the edge list (i, j) means there is a directed edge from the i-th node to the j-th node. Self-edges are possible, as well as multi-edges.
+
+For example, the following input graph:
+
+```
+ABACA
+[(0, 1),
+ (0, 2),
+ (2, 3),
+ (3, 4)]
+```
+
+Would have maximum value 3 using the path of vertices [0, 2, 3, 4], (A, A, C, A).
+
+The following input graph:
+
+```
+A
+[(0, 0)]
+```
+
+Should return null, since we have an infinite loop.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/71-80/problem_72.js)
+
+---
+
+## Problem 73
+
+Given the head of a singly linked list, reverse it in-place.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/71-80/problem_73.js)
+
+---
+
+## Problem 74
+
+Suppose you have a multiplication table that is N by N. That is, a 2D array where the value at the i-th row and j-th column is (i + 1) * (j + 1) (if 0-indexed) or i * j (if 1-indexed).
+
+Given integers N and X, write a function that returns the number of times X appears as a value in an N by N multiplication table.
+
+For example, given N = 6 and X = 12, you should return 4, since the multiplication table looks like this:
+
+| 1 | 2 | 3 | 4 | 5 | 6 |
+
+| 2 | 4 | 6 | 8 | 10 | 12 |
+
+| 3 | 6 | 9 | 12 | 15 | 18 |
+
+| 4 | 8 | 12 | 16 | 20 | 24 |
+
+| 5 | 10 | 15 | 20 | 25 | 30 |
+
+| 6 | 12 | 18 | 24 | 30 | 36 |
+
+And there are 4 12's in the table.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/71-80/problem_74.js)
+
+---
+
+## Problem 75
+
+Given an array of numbers, find the length of the longest increasing subsequence in the array. The subsequence does not necessarily have to be contiguous.
+
+For example, given the array [0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15], the longest increasing subsequence has length 6: it is 0, 2, 6, 9, 11, 15.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/71-80/problem_75.js)
+
+---
+
+## Problem 76
+
+You are given an N by M 2D matrix of lowercase letters. Determine the minimum number of columns that can be removed to ensure that each row is ordered from top to bottom lexicographically. That is, the letter at each column is lexicographically later as you go down each row. It does not matter whether each row itself is ordered lexicographically.
+
+For example, given the following table:
+```
+cba
+daf
+ghi
+```
+This is not ordered because of the a in the center. We can remove the second column to make it ordered:
+```
+ca
+df
+gi
+```
+So your function should return 1, since we only needed to remove 1 column.
+
+As another example, given the following table:
+```
+abcdef
+```
+Your function should return 0, since the rows are already ordered (there's only one row).
+
+As another example, given the following table:
+```
+zyx
+wvu
+tsr
+```
+Your function should return 3, since we would need to remove all the columns to order it.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/71-80/problem_76.js)
+
+---
+
+## Problem 77
+
+Given a list of possibly overlapping intervals, return a new list of intervals where all overlapping intervals have been merged.
+
+The input list is not necessarily ordered in any way.
+
+For example, given [(1, 3), (5, 8), (4, 10), (20, 25)], you should return [(1, 3), (4, 10), (20, 25)].
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/71-80/problem_77.js)
+
+---
+
+## Problem 78
+
+Given k sorted singly linked lists, write a function to merge all the lists into one sorted singly linked list.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/71-80/problem_78.js)
+
+---
+
+## Problem 79
+
+Given an array of integers, write a function to determine whether the array could become non-decreasing by modifying at most 1 element.
+
+For example, given the array [10, 5, 7], you should return true, since we can modify the 10 into a 1 to make the array non-decreasing.
+
+Given the array [10, 5, 1], you should return false, since we can't modify any one element to get a non-decreasing array.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/71-80/problem_79.js)
+
+---
+
+## Problem 80
+
+Given the root of a binary tree, return a deepest node. For example, in the following tree, return d.
+
+```
+    a
+   / \
+  b   c
+ /
+d
+```
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/71-80/problem_80.js)
+
+---
+
+## Problem 81
+
+Given a mapping of digits to letters (as in a phone number), and a digit string, return all possible letters the number could represent. You can assume each valid number in the mapping is a single digit.
+
+For example if {“2”: [“a”, “b”, “c”], 3: [“d”, “e”, “f”], …} then “23” should return [“ad”, “ae”, “af”, “bd”, “be”, “bf”, “cd”, “ce”, “cf"].
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/81-90/problem_81.js)
+
+---
+
+## Problem 82
+
+Using a read7() method that returns 7 characters from a file, implement readN(n) which reads n characters.
+
+For example, given a file with the content “Hello world”, three read7() returns “Hello w”, “orld” and then “”.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/81-90/problem_82.js)
+
+---
+
+## Problem 83
+
+Invert a binary tree.
+
+For example, given the following tree:
+
+```
+    a
+   / \
+  b   c
+ / \  /
+d   e f
+```
+
+should become:
+
+```
+  a
+ / \
+ c  b
+ \  / \
+  f e  d
+```
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/81-90/problem_83.js)
+
+---
+
+## Problem 84
+
+Given a matrix of 1s and 0s, return the number of "islands" in the matrix. A 1 represents land and 0 represents water, so an island is a group of 1s that are neighboring whose perimeter is surrounded by water.
+
+For example, this matrix has 4 islands.
+
+```
+1 0 0 0 0
+0 0 1 1 0
+0 1 1 0 0
+0 0 0 0 0
+1 1 0 0 1
+1 1 0 0 1
+```
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/81-90/problem_84.js)
+
+---
+
+## Problem 85
+
+Given three 32-bit integers x, y, and b, return x if b is 1 and y if b is 0, using only mathematical or bit operations. You can assume b can only be 1 or 0.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/81-90/problem_85.js)
+
+---
+
+## Problem 86
+
+Given a string of parentheses, write a function to compute the minimum number of parentheses to be removed to make the string valid (i.e. each open parenthesis is eventually closed).
+
+For example, given the string "()())()", you should return 1. Given the string ")(", you should return 2, since we must remove all of them.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/81-90/problem_86.js)
+
+---
+
+## Problem 87
+
+A rule looks like this:
+
+```
+A NE B
+```
+
+This means this means point A is located northeast of point B.
+
+```
+A SW C
+```
+
+means that point A is southwest of C.
+
+Given a list of rules, check if the sum of the rules validate. For example:
+
+```
+A N B
+B NE C
+C N A
+```
+
+does not validate, since A cannot be both north and south of C.
+
+```
+A NW B
+A N B
+```
+is considered valid.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/81-90/problem_87.js)
+
+---
+
+## Problem 88
+
+Implement division of two positive integers without using the division, multiplication, or modulus operators. Return the quotient as an integer, ignoring the remainder.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/81-90/problem_88.js)
+
+---
+
+## Problem 89
+
+Determine whether a tree is a valid binary search tree.
+
+A binary search tree is a tree with two children, left and right, and satisfies the constraint that the key in the left child must be less than or equal to the root and the key in the right child must be greater than or equal to the root.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/81-90/problem_89.js)
+
+---
+
+## Problem 90
+
+Given an integer n and a list of integers l, write a function that randomly generates a number from 0 to n-1 that isn't in l (uniform).
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/81-90/problem_90.js)
+
+---
+
+## Problem 91
+
+What does the below code snippet print out? How can we fix the anonymous functions to behave as we'd expect?
+
+```javascript
+const functions = [];
+for (var i = 0; i < 10; i++) {
+  functions.push(() => i);
+}
+
+functions.forEach(f => console.log(f()));
+```
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/91-100/problem_91.js)
+
+---
+
+## Problem 92
+
+We're given a hashmap associating each courseId key with a list of courseIds values, which represents that the prerequisites of courseId are courseIds. Return a sorted ordering of courses such that we can finish all courses.
+
+Return null if there is no such ordering.
+
+For example, given {'CSC300': ['CSC100', 'CSC200'], 'CSC200': ['CSC100'], 'CSC100': []}, should return ['CSC100', 'CSC200', 'CSCS300'].
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/91-100/problem_92.js)
+
+---
+
+## Problem 93
+
+Given a tree, find the largest tree/subtree that is a BST.
+
+Given a tree, return the size of the largest tree/subtree that is a BST.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/91-100/problem_93.js)
+
+---
+
+## Problem 94
+
+Given a binary tree of integers, find the maximum path sum between two nodes. The path must go through at least one node, and does not need to go through the root.
+
+[Solution](https://github.com/JeMuGa/coding_problems/blob/main/problems/91-100/problem_94.js)
+
+---
